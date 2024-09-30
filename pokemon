@@ -1,0 +1,29 @@
+// Objeto para armazenar informações dos Pokémons
+let pokemonDatabase = {};
+
+// Função para cadastrar um Pokémon
+function cadastrarPokemon() {
+    let nome = prompt("Digite o nome do Pokémon:");
+    let tipo = prompt("Digite o tipo do Pokémon:");
+    let nivel = parseInt(prompt("Digite o nível do Pokémon:"));
+    let habilidades = prompt("Digite as habilidades do Pokémon (separe por vírgula):").split(",");
+    let peso = parseFloat(prompt("Digite o peso do Pokémon (em kg):"));
+    let altura = parseFloat(prompt("Digite a altura do Pokémon (em metros):"));
+    let numeroPokedex = parseInt(prompt("Digite o número da Pokédex:"));
+    
+    // Armazenando as informações no objeto
+    pokemonDatabase[nome] = {
+        'Tipo': tipo,
+        'Nível': nivel,
+        'Habilidades': habilidades,
+        'Peso': peso,
+        'Altura': altura,
+        'Número da Pokédex': numeroPokedex
+    };
+    
+    // Exibindo a mensagem de sucesso
+    console.log(nome + " cadastrado com sucesso!");
+}
+
+// Exemplo de chamada da função
+cadastrarPokemon();
